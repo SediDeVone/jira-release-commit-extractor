@@ -1,0 +1,1 @@
+# JIRA Release Commit Extractor
