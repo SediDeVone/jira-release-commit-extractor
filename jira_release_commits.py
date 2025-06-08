@@ -151,7 +151,7 @@ class JiraReleaseCommitExtractor:
 
             # Check if any ticket key is in the commit message
             for ticket_key in ticket_keys:
-                if re.search(rf'\b{ticket_key}\b', commit_message, re.IGNORECASE):
+                if re.search(rf'(?<!\w){ticket_key}(?!\d)', commit_message, re.IGNORECASE):
 
                     # Skip if we've already processed this commit
                     if commit_hash in unique_commit_hashes:
